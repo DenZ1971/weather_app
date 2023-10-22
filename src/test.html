@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test getCurrentPosition</title>
+</head>
+<body>
+  <script type="module">
+    import { getCurrentPosition } from './testjs/testscript.js';
+
+    (async () => {
+      try {
+        const position = await getCurrentPosition();
+        console.log('Coordinates:', position.coords.latitude, position.coords.longitude);
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    })();
+  </script>
+</body>
+</html>
